@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ShowInfo from "../components/ShowInfo";
 import { ArrowDownTrayIcon } from "@heroicons/react/20/solid";
 import { BarChartGraph } from "../components/BarChartGraph";
@@ -99,16 +99,6 @@ export default function Chart({
         }
     ]
 }
-
-  useEffect(() => {
-    if (selectedButton === "new") {
-      setBarData(newData);
-    } else if (selectedButton === "pending") {
-      setBarData(pendingData);
-    } else if (selectedButton === "fixed") {
-      setBarData(fixedData);
-    }
-  }, [newData, pendingData, fixedData, selectedButton]);
 
   const handleButtonClick = (button: string) => {
     setSelectedButton(button);
