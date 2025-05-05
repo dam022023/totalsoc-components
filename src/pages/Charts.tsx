@@ -15,7 +15,7 @@ interface GraphProps {
   activeButtonBgColor?: string;
 }
 
-export default function Chart({
+export default function Charts({
   newData = [],
   pendingData = [],
   fixedData = [],
