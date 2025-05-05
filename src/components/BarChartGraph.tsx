@@ -105,7 +105,7 @@ export function BarChartGraph ({
             height={36}
             iconType="square"
             verticalAlign="top"
-            onClick={(props) => handleLegendClick((props.dataKey ?? "").toString())}
+            onClick={(props) => props.dataKey ? handleLegendClick(props.dataKey.toString()) : null}
           />
           <Bar
             onClick={() => setShowLabel(!showLabel)}
